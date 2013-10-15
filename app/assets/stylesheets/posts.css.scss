@@ -16,3 +16,39 @@ h1, {
 a, a:visited {
 	color:  darken($primary-color, 20%);
 }
+
+/*article h1.title {
+	font-family: molesk;
+}
+
+article time {
+	font-family: chelsea;
+	font-size: 1.3em;
+}
+
+article .body p {
+	font-family: Avenir;
+	font-size: 1.1em;
+}*/
+
+/*Same styling except refactored using SASS nesting. */
+
+article {
+  h1.title {
+		font-family: molesk;
+  }
+
+  time {
+  	font: {
+  		weight: bold;
+    	family: chelsea;
+    	size: 1.3em;
+    }
+  }
+
+  .body {
+    p { line-height: 1.5em;
+    		font-family: Avenir;
+    }
+  }
+}

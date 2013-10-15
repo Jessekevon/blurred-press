@@ -4,6 +4,14 @@
 
 $primary-color: #00b8f0;
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
 
 h1, {
 	color: $primary-color;
@@ -38,13 +46,16 @@ article {
 		font-family: molesk;
   }
 
-  time {
-  	font: {
-  		weight: bold;
-    	family: chelsea;
-    	size: 1.3em;
-    }
+time {
+  font: {
+    weight: bold;
+    family: chelsea, Geneva, sans-serif;
+    size: 1.3em;
+    padding: 4px;
+		border: 2px solid darken($primary-color, 10%);
+		@include border-radius(5px);
   }
+}
 
   .body {
     p { line-height: 1.5em;
@@ -52,3 +63,4 @@ article {
     }
   }
 }
+
